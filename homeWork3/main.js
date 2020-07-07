@@ -1,5 +1,6 @@
 /* 1 */
 console.log('-- створити обєкт (не меньше 5ти властивостей) який описує');
+/* 1.1 */
 console.log('- собаку');
 let dog = {
     name: 'Bim',
@@ -10,7 +11,7 @@ let dog = {
 };
 console.log(dog);
 console.log('=========================================');
-
+/* 1.2 */
 console.log('- людину');
 let human = {
     firstName: 'Dima',
@@ -21,7 +22,7 @@ let human = {
 };
 console.log(human);
 console.log('=========================================');
-
+/* 1.3 */
 console.log('- автомобіль');
 let car = {
     model: 'Model S',
@@ -32,7 +33,7 @@ let car = {
 };
 console.log(car);
 console.log('=========================================');
-
+/* 1.4 */
 console.log('- квартиру');
 let flat = {
     adrres: 'Kyiv, Khreschatik 1',
@@ -43,7 +44,7 @@ let flat = {
 };
 console.log(flat);
 console.log('=========================================');
-
+/* 1.5 */
 console.log('- книгу');
 let book = {
     name: 'Lord of the Rings',
@@ -55,9 +56,9 @@ let book = {
 console.log(book);
 console.log('=========================================');
 
-
 /* 2 */
 console.log('-- Створити масив та вивести його в консоль:');
+/* 2.1 */
 console.log('- з 5 собак');
 let dogs = [
     { name: 'Bim', rock: 'cur', gender: 'male', age: 2, heigh: 35 },
@@ -68,7 +69,7 @@ let dogs = [
 ];
 console.log(dogs);
 console.log('=========================================');
-
+/* 2.2 */
 console.log('- 3 5 людей');
 let humans = [
     { firstName: 'Dima', lastName: 'Dziubenko', age: 50, gender: 'male', status: true },
@@ -79,7 +80,7 @@ let humans = [
 ];
 console.log(humans);
 console.log('=========================================');
-
+/* 2.3 */
 console.log('- з 5 автомобілів');
 let cars = [
     { model: 'Model S', brand: 'Tesla', volume: 1.6, type: 'electric car', tireSize: 16 },
@@ -91,57 +92,124 @@ let cars = [
 console.log(cars);
 console.log('=========================================');
 
-/*-- створити об'єкт (не меньше 5ти властивостей) який описує, одна з властивостей обов'язково повинна бути об'єктом,ще одна - масивом
-- будинок
-- водій
-- іграшку
-- стіл
-- сумка
-
-
-
-Дан массив:
+/* 3 */
+console.log('-- створити обєкт (не меньше 5ти властивостей) який описує, одна з властивостей обовязково повинна бути обєктом,ще одна - масивом');
+/* 3.1 */
+console.log('- будинок');
+let house = {
+    adress: 'Українка, вул. Центральна, 1',
+    houseArea: 75,
+    landPlot: 10,
+    communications: ['electric', 'water well', 'sewerage'],
+    owners: {
+        firstName: 'Dima',
+        lastName: 'Dziubenko',
+        age: 50,
+        gender: 'male',
+        status: true
+    }
+};
+console.log(house);
+console.log('=========================================');
+/* 3.2 */
+console.log('- водій');
+let driver = {
+    firstName: 'Dima',
+    lastName: 'Dziubenko',
+    age: 50,
+    category: ['A', 'B', 'C'],
+    car: {
+        model: 'Model S',
+        brand: 'Tesla',
+        volume: 1.6,
+        type: 'electric car',
+        tireSize: 16
+    }
+};
+console.log(driver);
+console.log('=========================================');
+/* 3.3 */
+console.log('- іграшку');
+let toy = {
+    name: 'Кукла Zapf',
+    brand: 'Baby Born',
+    manufacturerCountry: 'China',
+    equipment: ['Тарелочка с ложкой', 'Подгузник', 'Пустышка', 'Горшочек'],
+    owners: {
+        name: 'Zlata',
+        age: 4
+    }
+};
+console.log(toy);
+console.log('=========================================');
+/* 3.4 */
+console.log('- стіл');
+let table = {
+    brand: 'AMF',
+    form: 'square',
+    type: 'folding',
+    materials: ['MDF', 'Glases'],
+    size: {
+        heigh: 178,
+        width: 80,
+        length: 250
+    }
+};
+console.log(toy);
+console.log('=========================================');
+/* 3.5 */
+console.log('- сумка');
+let bag = {
+    brand: 'No Name',
+    color: 'black',
+    category: 'woman',
+    materials: ['полиэстер', 'полиуретан'],
+    size: {
+        heigh: 35,
+        width: 15,
+        length: 40
+    }
+};
+console.log(bag);
+console.log('=========================================');
+/* 4 */
+console.log('Дан массив:');
 let users = [
-				{name: 'vasya', age: 31, status: false},
-				{name: 'petya', age: 30, status: true},
-				{name: 'kolya', age: 29, status: true},
-				{name: 'olya', age: 28, status: false},
-				{name: 'max', age: 30, status: true},
-				{name: 'anya', age: 31, status: false},
-				{name: 'oleg', age: 28, status: false},
-				{name: 'andrey', age: 29, status: true},
-				{name: 'masha', age: 30, status: true},
-				{name: 'olya', age: 31, status: false},
-				{name: 'max', age: 31, status: true}
-			];
-- звернутися в відповідну ячейку масиву і відповідний параметр об'єкта і вивести в консольх наступне
-- статус Андрія
-- статус Максима
-- ім'я передостаннього об'єкту
-- ім'я третього об'єкта
-- вік Олега
-- вік Олі
-- вік + ім'я 5го об'єкта
-- вік + сатус Анни
-Приклад: вивести ім'я 1го об'єкта. Відповідь: console.log (users [0] .name). Будьте уважні! 4й об'єкт має індес 3!
+    { name: 'vasya', age: 31, status: false },
+    { name: 'petya', age: 30, status: true },
+    { name: 'kolya', age: 29, status: true },
+    { name: 'olya', age: 28, status: false },
+    { name: 'max', age: 30, status: true },
+    { name: 'anya', age: 31, status: false },
+    { name: 'oleg', age: 28, status: false },
+    { name: 'andrey', age: 29, status: true },
+    { name: 'masha', age: 30, status: true },
+    { name: 'olya', age: 31, status: false },
+    { name: 'max', age: 31, status: true }
+];
+console.log(users);
+console.log('- звернутися в відповідну ячейку масиву і відповідний параметр обєкта і вивести в консольх наступне');
+console.log('Приклад: вивести імя 1го обєкта. Відповідь: console.log (users [0] .name). Будьте уважні! 4й обєкт має індес 3!')
+console.log('- статус Андрія');
+console.log('Статус Андрія: ' + users[7].status);
+console.log('- статус Максима');
+console.log('Cтатус Максима: ' + users[4].status);
+console.log('- імя передостаннього обєкту');
+console.log('Iмя передостаннього обєкту: ' + users[users.length - 2].name);
+console.log('- імя третього обєкта');
+console.log('Iмя третього обєкта: ' + users[2].name);
+console.log('- вік Олега');
+console.log('Bік Олега' + users[6].age);
+console.log('- вік Олі');
+console.log('Bік Олі ' + users[3].age + ' Bік Олі ' + users[9].age);
+console.log('- вік + імя 5го обєкта');
+console.log(`Bік ${users[4].age} + імя 5го обєкта ${users[4].name}`);
+console.log('- вік + сатус Анни');
+console.log(`вік ${users[5].age} + сатус Анни ${users[5].status}`);
 
--Візьміть файл template1.html, підключіть до нього скрипт, і працюйте в ньому.
 
--- Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :
-- отримує текст з параграфа з id "content"
-- отримує текст з блоку з id "rules"
-- замініть текст параграфа з id 'content' на будь-який інший
-- замініть текст параграфа з id 'rules' на будь-який інший
-- змініть кожному елементу колір фону на червоний
-- змініть кожному елементу колір тексту на синій
-- отримати весь список класів елемента з id=rules і вивести їх в console.log
-- отримати всі елементи з класом fc_rules
-- поміняти колір тексту у всіх елементів fc_rules на червоний
 
-====================
-====================
-====================
-
+/*
 =================
 =====class=======
 =================
