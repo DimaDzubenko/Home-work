@@ -18,10 +18,9 @@ for (const element of classElements) {
     element.style.width = '50%';
 }
 
-/* !!!! */
 console.log('-- отримує текст який зберігається в елементі з класом listElement2');
-сlassElements = document.getElementsByClassName('listElement2');
-for (let element of classElements) {
+classElements = document.getElementsByClassName('listElement2');
+for (const element of classElements) {
     console.log(element.innerText);
 }
 
