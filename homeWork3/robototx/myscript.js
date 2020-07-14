@@ -2,6 +2,7 @@
 console.log('--Завантажити з мережі будь-який шаблон сайту. Підключити до нього свій скріпт-файл. У файлі прописати наступні доступи та дії');
 console.log('- знайти всі елементі, які мають class');
 let allElementsInPage = document.querySelectorAll('*');
+//let elementNodeListOf = document.querySelectorAll('[class]');
 console.log(allElementsInPage);
 let elementsHaveClass = [];
 for (const iterator of allElementsInPage) {
@@ -10,7 +11,6 @@ for (const iterator of allElementsInPage) {
     }
 }
 console.log(elementsHaveClass);
-//console.log(elementsHaveClass);
 console.log('- знайти всі параграфи ,та змінити текст на hello oktenweb!');
 let elementsParagraf = document.getElementsByTagName("p");
 for (const i of elementsParagraf) {
