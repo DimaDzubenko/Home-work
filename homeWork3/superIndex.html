@@ -64,6 +64,10 @@
         <div id="task20"></div>
         <div id="task21"></div>
         <div id="task22"></div>
+        <div id="task24" class="task24">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nihil, blanditiis amet exercitationem expedita nam modi perspiciatis ab nisi illo quod, iure ea adipisci magni id ipsa. Nisi, nesciunt incidunt.</div>
+        <div id='task27'></div>
+        <div id="task28"></div>
+        <div id="task29"></div>
     </div>
 
     <script>
@@ -790,7 +794,7 @@
             addressDiv.appendChild(houseNumberDiv);
         }
         console.log('==========');
-        /* 23 */
+        /* 23 */ //!!!!!
         console.log('- Дано 2 масиви з рівною кількістю обєктів.');
         console.log('Масиви:');
         let usersWithId = [{
@@ -814,7 +818,7 @@
             age: 28,
             status: false
         }, ];
-        console.log('usersWithId');
+        console.log(usersWithId);
         let citiesWithId = [{
             user_id: 3,
             country: 'USA',
@@ -832,7 +836,10 @@
             country: 'USA',
             city: 'Miami'
         }, ];
-        console.log('citiesWithId');
+        console.log(citiesWithId);
+        citiesWithId.sort()
+        let usersWithCities = [];
+        console.log(usersWithCities);
         console.log(`З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .`);
         console.log(`Записати цей об'єкт в новий масив`);
         console.log('Частковий приклад реультату:');
@@ -841,30 +848,103 @@
         console.log('==========');
         /* 24 */
         console.log('- створити розмітці блок з id, class та текстом в середені. Зчитати окремо цей текст з селекторів по id , class та тегу');
+        /*let selectorId = document.getElementById('task24').innerText;
+        console.log(selectorId);
+        let selectorClass = document.getElementsByClassName('task24');
+        for (const i of selectorClass) {
+            console.log(i.innerText);
+        }
+        let selectorTeg = document.getElementsByTagName('div');
+        console.log(selectorTeg[192].innerText);*/
         console.log('==========');
         /* 25 */
         console.log('- змінити цей текст використовуючи селектори id, class,  tag');
-        console.log('==========');
+        /* selectorId.innerText = 'XXXXX';
+        for (const i of selectorClass) {
+            i.innerText = 'XXXXX';
+        }
+        selectorTeg[192].innerText = 'XXXXX';
+        console.log('=========='); */
         /* 26 */
         console.log('- змінити висоту та ширину блоку використовуючи селектори id, class,  tag');
+        /* let selectorId = document.getElementById('task24');
+        selectorId.style.width = "100px";
+        selectorId.style.height = "100px"; */
+        /* let selectorClass = document.getElementsByClassName('task24');
+        for (const i of selectorClass) {
+            i.style.width = "150px";
+            i.style.height = "150px";
+        } */
+        /* let selectorTeg = document.getElementsByTagName('div');
+        selectorTeg[192].style.height = "200px";
+        selectorTeg[192].style.width = "200px"; */
         console.log('==========');
         /* 27 */
         console.log('- за допомоги document.createElement та appendChild створити таблицю на 1 рядок з трьома ячейками всередені');
+        let tableContainer = document.getElementById('task27');
+        tableContainer.style.display = "flex";
+        tableContainer.style.flexDirection = "row";
+        for (let i = 3; i > 0; i--) {
+            let cell = document.createElement('div');
+            cell.style.width = "60px";
+            cell.style.height = "30px";
+            cell.style.border = "3px solid black";
+            tableContainer.appendChild(cell);
+        }
         console.log('==========');
         /* 28 */
         console.log('- за допомоги document.createElement, appendChild та циклу створити таблицю на 10 рядків з трьома ячейками всередені');
+        let taskContainer = document.getElementById('task28');
+        for (let i = 10; i > 0; i--) {
+            let row = document.createElement("div");
+            row.style.display = "flex";
+            row.style.flexDirection = "row";
+            for (let j = 3; j > 0; j--) {
+                let cell = document.createElement("div");
+                cell.style.width = "100px";
+                cell.style.height = "50px";
+                cell.style.border = "2px solid black";
+                row.appendChild(cell);
+            }
+            taskContainer.appendChild(row);
+        }
         console.log('==========');
         /* 29 */
         console.log('- за допомоги document.createElement, appendChild та 2х циклів створити таблицю на 10 рядків з 5 ячейками всередені');
+        taskContainer = document.getElementById('task29');
+        for (let i = 10; i > 0; i--) {
+            let row = document.createElement("div");
+            row.style.display = "flex";
+            row.style.flexDirection = "row";
+            for (let j = 5; j > 0; j--) {
+                let cell = document.createElement("div");
+                cell.style.width = "80px";
+                cell.style.height = "40px";
+                cell.style.border = "2px solid black";
+                row.appendChild(cell);
+            }
+            taskContainer.appendChild(row);
+        }
         console.log('==========');
         /* 30 */
         console.log('- за допомоги document.createElement, appendChild та 2х циклів створити таблицю на n рядків з m ячейками всередені. n та m отримати з prompt');
-        console.log('==========');
-        /* 31 */
-        console.log('--Завантажити з мережі будь-який шаблон сайту. Підключити до нього свій скріпт-файл. У файлі прописати наступні доступи та дії');
-        console.log('- знайти всі елементі, які мають class');
-        console.log('- знайти всі параграфи ,та змінити текст на hello oktenweb!');
-        console.log('- знайти всі div та змінити ім колір на червоний');
+        taskContainer = document.getElementById('task29');
+        let nRow = prompt('Введите количество рядов для построения таблицы');
+        let mRow = prompt('Введите количество столбцов для построения таблицы');
+
+        for (let i = nRow; i > 0; i--) {
+            let row = document.createElement("div");
+            row.style.display = "flex";
+            row.style.flexDirection = "row";
+            for (let j = mRow; j > 0; j--) {
+                let cell = document.createElement("div");
+                cell.style.width = "80px";
+                cell.style.height = "40px";
+                cell.style.border = "2px solid black";
+                row.appendChild(cell);
+            }
+            taskContainer.appendChild(row);
+        }
         console.log('==========');
     </script>
 </body>
