@@ -324,8 +324,20 @@ let usersWithId = [{ id: 1, name: 'vasya', age: 31, status: false }, { id: 2, na
 console.log(usersWithId);
 let citiesWithId = [{ user_id: 3, country: 'USA', city: 'Portland' }, { user_id: 1, country: 'Ukraine', city: 'Ternopil' }, { user_id: 2, country: 'Poland', city: 'Krakow' }, { user_id: 4, country: 'USA', city: 'Miami' }, ];
 console.log(citiesWithId);
-console.log('(на основі минулого ДЗ)');
-console.log('(на основі минулого ДЗ)');
+
+function connectArr(arr1, arr2) {
+    let arrayResult = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i].id === arr2[j].user_id) {
+                arrayResult.push(arr1[i]);
+                arrayResult[i].address = arr2[j];
+            }
+        }
+    }
+    return arrayResult;
+}
+console.log(connectArr(usersWithId, citiesWithId));
 console.log('==========');
 /* 18 */
 console.log('***- беремо завдання з правилами з укроку №3 :');
@@ -364,6 +376,24 @@ let rules = [{
     }
 ];
 console.log(rules);
+let containerFightClub = document.getElementById('wrap');
+
+function rulesFightClub(arr) {
+    for (const i of arr) {
+        let block = document.createElement('div');
+        let title = document.createElement('h3');
+        let body = document.createElement('p');
+
+        title.innerText = `${i.title}`;
+        body.innerText = `${i.body}`;
+
+        containerFightClub.appendChild(block);
+        block.appendChild(title);
+        block.appendChild(body);
+    }
+}
+rulesFightClub(rules);
+console.log('+');
 console.log('==========');
 /* 19 */
 console.log('===========додаткове від віктора========');
