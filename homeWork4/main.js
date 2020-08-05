@@ -59,7 +59,29 @@ max(1, 2, 3);
 console.log('==========');
 /* 5 */
 console.log('- створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше');
-/* awesome my code */
+
+function getMaxOfArray(numArray) {
+    return Math.max.apply(null, numArray);
+}
+
+function getMinOfArray(numArray) {
+    return Math.min.apply(Math, numArray);
+}
+
+
+function func() {
+    let numbers = [];
+    for (value in arguments) {
+        numbers.push(Number.parseInt(arguments[value]));
+    }
+
+    console.log(getMaxOfArray(numbers));
+    return getMinOfArray(numbers);
+}
+
+
+console.log(func(1, 2, 3));
+
 console.log('==========');
 /* 6 */
 console.log('- створити функцію яка виводить масив');
@@ -117,9 +139,36 @@ function quantityObjArr(arr) {
 }
 console.log(quantityObjArr(arrTestfirst))
 console.log('==========');
-/* 12 */
+/* 12 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 console.log('- Створити функцію яка приймає масив будь яких объектів, та повертає загальн кількість полів в них');
-/* awesome my code */
+let users = [
+    { name: 'vasya', age: 31, status: false },
+    { name: 'petya', age: 30, status: true },
+    { name: 'kolya', age: 29, status: true },
+    { name: 'olya', age: 28, status: false },
+    { name: 'max', age: 30, status: true },
+    { name: 'anya', age: 31, status: false },
+    { name: 'oleg', age: 28, status: false },
+    { name: 'andrey', age: 29, status: true },
+    { name: 'masha', age: 30, status: true },
+    { name: 'olya', age: 31, status: false },
+    { name: 'max', age: 31, status: true }
+];
+
+function objFunc(array) {
+    let a = 0;
+    for (const iterator of array) {
+        //Object.keys(iterator);
+        for (const key in iterator) {
+            a++;
+        }
+    }
+
+    return a;
+}
+let objFun = objFunc(users);
+console.log(objFun);
+
 console.log('==========');
 /* 13 */
 console.log('- створити функцію  яка скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.');
