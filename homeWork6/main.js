@@ -98,48 +98,28 @@ console.log('==========');
 /* 3.5 */
 console.log('-- наисать функцию калькулятора с 2мя числами и колбеком');
 
-function calcTwoNumber(a, b, callback) {
-    callback(a, b);
+function calcNumber(a, b, result) {
+    result(a, b);
 }
 
-calcTwoNumber(10, 20, function(a, b) {
-    return console.log(a + b);
-});
+calcNumber(10, 20, (a, b) => console.log(a + b));
+calcNumber(10, 20, (a, b) => console.log(a - b));
+calcNumber(10, 20, (a, b) => console.log(a / b));
+calcNumber(10, 20, (a, b) => console.log(a * b));
 
-calcTwoNumber(10, 20, function(a, b) {
-    return console.log(a - b);
-});
-
-calcTwoNumber(10, 20, function(a, b) {
-    return console.log(a * b);
-});
-
-calcTwoNumber(10, 20, function(a, b) {
-    return console.log(a / b);
-});
 console.log('==========');
 /* 3.6 */
 console.log('-- наисать функцию калькулятора с 3мя числами и колбеком');
 
-function calcThreeNumber(a, b, c, callback) {
-    callback(a, b, c);
+function calcNumberThree(a, b, c, result) {
+    result(a, b, c);
 }
 
-calcTwoNumber(10, 20, 1, function(a, b, c) {
-    return console.log(a + b + c);
-});
+calcNumberThree(10, 20, 1, (a, b, c) => console.log(a + b + c));
+calcNumberThree(10, 20, 1, (a, b, c) => console.log(a - b - c));
+calcNumberThree(10, 20, 1, (a, b, c) => console.log(a * b * c));
+calcNumberThree(10, 20, 1, (a, b, c) => console.log(a / b / c));
 
-calcTwoNumber(10, 20, 1, function(a, b, c) {
-    return console.log(a - b - c);
-});
-
-calcTwoNumber(10, 20, 1, function(a, b, c) {
-    return console.log(a * b * c);
-});
-
-calcTwoNumber(10, 20, 1, function(a, b, c) {
-    return console.log(a / b / c);
-});
 console.log('==========');
 /* 
 =============================================
